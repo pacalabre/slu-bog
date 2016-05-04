@@ -1,3 +1,4 @@
+
 # The South Lake Union Bog - Intro to Rails
 
 Researchers at your local biology lab are exploring and documenting the history of the South Lake Union bog, and the creatures of interest. Our job is to encourage people in the community to explore SLU and submit their findings using our web application.
