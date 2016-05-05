@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url(https://fonts.googleapis.com/css?family=Work+Sans:900);
+
+body {
+  background-image: url("https://unsplash.com/photos/b5POxb2aL9o");
+
+}
+
+ nav{
+  background: black;
+  color:white;
+  padding:20px;
+  margin: -20px 50px 0px 50px;
+  padding: -20px;
+ }
+ li {
+  list-style: none;
+  text-decoration: none;
+ }
+
+a {
+  color: blue;
+  text-decoration: none;
+  float: right;
+}
+
+.index-h1{
+  text-align: center;
+  font-size: 120px;
+  font-family: Work Sans;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: work sans
+}
+
