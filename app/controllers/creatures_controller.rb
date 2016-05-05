@@ -18,6 +18,13 @@ class CreaturesController < ApplicationController
   end
 
   def update
+    @creature = Creature.find params[:id]
+    @creature.update creature_params
+    redirect_to creatures_path
+  end
+
+  def edit
+    @creature = Creature.find params[:id]
   end
 
   def destroy
