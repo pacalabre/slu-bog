@@ -1,7 +1,6 @@
-<nav>
-  <ul>
-    <a href="/creatures"><li>Creatures</li></a>
-    <a href="/"><li>Home</li></a>
-  </ul>
-</nav>
-<h1 class="index-h1">South Lake Union Animals Bog</h1>
+<h1>SLU Blog</h1>
+
+<section id="content-section" class="container"></section>
+<%= @hobbies.each do |hobby| %>
+<a href="/api/creature/<%= %>"class="show-link" <%hobby[:name]%></h2></a>
+<p> <%= hobby[:description]%> </p>

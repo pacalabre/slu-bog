@@ -1,6 +1,6 @@
 class MainController < ApplicationController
   def index
-    @creatures="testing"
+    @creatures= Creature.all
   end
 
   def create
