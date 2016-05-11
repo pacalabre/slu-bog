@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'main#index'
+  root 'main#index'
   get 'api/creatures/all' => 'api#all'
   get 'api/creatures/:id' => 'api#show'
 

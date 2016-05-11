@@ -1,6 +1,9 @@
 <h1>SLU Blog</h1>
 
 <section id="content-section" class="container"></section>
-<%= @hobbies.each do |hobby| %>
-<a href="/api/creature/<%= %>"class="show-link" <%hobby[:name]%></h2></a>
-<p> <%= hobby[:description]%> </p>
+
+
+<%= @creatures.each do |creatures| %>
+<a href="/api/creatures/<%= %>"class="show-link" <%creatures[:name]%></h2></a>
+<p> <%= creatures[:description]%> </p>
+<% end %>
