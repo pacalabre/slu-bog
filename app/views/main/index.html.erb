@@ -1,9 +1,14 @@
 <h1>SLU Blog</h1>
+<nav>
+  <ul>
+    <a href="/"><li>Home</li><a/>
+    <li id="all-creatures">All</li>
+    <li></li>
+  </ul>
+</nav>
 
-<section id="content-section" class="container"></section>
+<section href="api/creatures/all" id="content-section" class="container">
+<h1>All Creatures</h1>
+</section>
 
 
-<%= @creatures.each do |creatures| %>
-<a href="/api/creatures/<%= %>"class="show-link" <%creatures[:name]%></h2></a>
-<p> <%= creatures[:description]%> </p>
-<% end %>

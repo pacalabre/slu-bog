@@ -8,6 +8,6 @@ class ApiController < ApplicationController
 
   def show
     @creatures = Creature.find_by_id params[:id]
-    render :json => @hobby
+    render :json => @creatures
   end
 end
