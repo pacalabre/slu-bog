@@ -10,7 +10,7 @@ $('#all-creatures').click(function(e){
         contentSection.html('');
         data.forEach(function(creature){
           contentSection.append(
-            '<a href="/api/creature' + creature.username + '"class="show-link"><h2>' + creature.username + '</</a><p>' + creature.creature + '</p>'
+            '<a href="/api/creatures/' + creature.id + '"class="show-link"><h2>' + creature.username + '</</a><p>' + creature.creature + '</p>'
           );
         });
       },
@@ -22,14 +22,13 @@ $('#all-creatures').click(function(e){
 
 $('#content-section').on('click', 'a.show-link', function(e) {
     e.preventDefault();
-    alert('sup')
     var aTag = $(this);
 
     $.ajax({
       url: aTag.attr('href'),
       method: 'GET',
-      success: function(data){
-        $('#content-section').html('<h2>' +create.name+ '</h2><p>'+data.description + '</p>')
+      success: function(creature){
+        $('#content-section').html('<h2>' +creature.username+ '</h2><p>'+creature.creature + '</p>')
       },
       error: function(err){
         console.log(err);
