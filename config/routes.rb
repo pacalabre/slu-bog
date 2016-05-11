@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'main#index'
   get 'api/creatures/all' => 'api#all'
   get 'api/creatures/:id' => 'api#show'
+  post 'creatures/create' => 'api#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

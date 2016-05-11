@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+$('#newForm').hide();
+
 $('#all-creatures').click(function(e){
     e.preventDefault();
     $.ajax({
@@ -35,4 +37,34 @@ $('#content-section').on('click', 'a.show-link', function(e) {
       }
     })
   })
+
+  // Create New
+ $('#createNew').on('click',function(e){
+    e.preventDefault();
+    $('#newForm').show();
+ })
+
+ $('#newForm').on('submit', function(e) {
+    e.preventDefault();
+    alert('yo')
+    var data = $(this).serialize();
+    $.ajax({
+      type: 'POST',
+      url: $(this).attr('action'),
+      data: data,
+      success: function(creature) {
+        alert("data posted");
+      },
+      error: function(err){
+        console.log(err);
+      }
+    })
+ })
+
+
+
+
+
+
+
 })

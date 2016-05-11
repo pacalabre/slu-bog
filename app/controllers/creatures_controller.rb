@@ -9,7 +9,7 @@ class CreaturesController < ApplicationController
   end
 
   def create
-    creature = Creature.create creature_params
+    @creature = Creature.create params[:username,:creature]
     redirect_to creature_path creature
   end
 
@@ -32,7 +32,7 @@ class CreaturesController < ApplicationController
     redirect_to creatures_path
   end
 
-  def creature_params
-    params.require(:creature).permit(:username, :creature)
-  end
+  # def creature_params
+  #   params.require(:creature).permit(:username, :creature)
+  # end
 end
